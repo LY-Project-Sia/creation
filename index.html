@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LY-Project-Sia | Future Origin</title>
+    <style>
+        :root {
+            --bg: #0a0a0c;
+            --accent: #00f2ff;
+            --text: #e0e0e0;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Futuristic Grid Background */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(var(--glass) 1px, transparent 1px),
+                        linear-gradient(90deg, var(--glass) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid var(--accent);
+        }
+
+        .logo {
+            font-size: 3rem;
+            letter-spacing: 10px;
+            text-transform: uppercase;
+            color: var(--accent);
+            text-shadow: 0 0 20px var(--accent);
+            margin-bottom: 10px;
+            animation: flicker 3s infinite;
+        }
+
+        .status-bar {
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--glass);
+            border-left: 2px solid var(--accent);
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            background: rgba(0, 242, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .card::after {
+            content: "SYSTEM_ACTIVE";
+            position: absolute;
+            bottom: 5px; right: 5px;
+            font-size: 0.5rem;
+            color: var(--accent);
+            opacity: 0.5;
+        }
+
+        h2 { border-bottom: 1px solid #333; padding-bottom: 10px; }
+        
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+            20%, 22%, 24%, 55% { opacity: 0.5; }
+        }
+
+        .btn {
+            border: 1px solid var(--accent);
+            padding: 10px 30px;
+            color: var(--accent);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background: var(--accent);
+            color: black;
+            box-shadow: 0 0 20px var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="status-bar">SYSTEM INITIALIZED // ENCRYPTED CONNECTION READY</div>
+        <div class="logo">LY-PROJECT-SIA</div>
+        <p>Architecting the Next Timeline.</p>
+        <a href="#creations" class="btn">Initialize Interface</a>
+    </header>
+
+    <div class="container" id="creations">
+        <h2>Active Creation Modules</h2>
+        <div class="project-grid">
+            <div class="card">
+                <h3>NEURAL_NODE_01</h3>
+                <p>A cognitive interface project designed to bridge the gap between human intent and automated execution.</p>
+            </div>
+            <div class="card">
+                <h3>VOID_FRAMEWORK</h3>
+                <p>Minimalist structural architecture for high-speed digital environments and decentralized data.</p>
+            </div>
+            <div class="card">
+                <h3>SIA_GHOST_UI</h3>
+                <p>A glassmorphic visual system optimized for augmented reality and futuristic displays.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 50px; color: #444; font-size: 0.7rem;">
+        &copy; 2026 LY-PROJECT-SIA | PROTOCOL_STABLE
+    </footer>
+
+</body>
+</html>
